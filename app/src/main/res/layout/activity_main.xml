@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        tools:context=".MainActivity">
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            app:navigationIcon="@drawable/back"
+            app:titleTextColor="@color/white"
+            app:title="Kembali"/>
+
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/white"
+            android:text="Predict"
+            android:textColor="@color/pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Outcome"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/btnCheck"
+            app:layout_constraintStart_toStartOf="@id/btnCheck"
+            app:layout_constraintTop_toBottomOf="@id/btnCheck" />
+
+        <EditText
+            android:id="@+id/Preg"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/pink_border"
+            android:textColorHint="@color/white"
+            android:ems="15"
+            android:hint="  Jenis Kelamin (1 L - 2 P )"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/Glucose"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Kadar gula glukosa (20 - 110 mg/dL)"
+            android:background="@drawable/pink_border"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Preg"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/Blood"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:background="@drawable/pink_border"
+            android:hint="  Tekanan Darah (80 - 160 mmHg)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Glucose"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/Skin"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Ketebalan kulit (0 - 100)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Blood"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/Insulin"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Hormon insulin (1 Normal - 2 Tidak )"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Skin"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/Diabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint=" Punya Riwayat diabetes ?(1 YA - 2 TIDAK)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Insulin"
+            tools:ignore="HardcodedText" />
+
+
+
+        <EditText
+            android:id="@+id/Age"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Umur (20 - 80)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            android:background="@drawable/pink_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Diabetes"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/Outcome"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="15"
+            android:hint="  Gol Darah (A/1-B/2-AB/3-O/4)"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:textColorHint="@color/white"
+            android:background="@drawable/pink_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Age"
+            tools:ignore="HardcodedText" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
